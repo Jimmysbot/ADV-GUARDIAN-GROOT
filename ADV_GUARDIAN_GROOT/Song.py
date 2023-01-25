@@ -33,7 +33,7 @@ def a(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('`ѕєαrchíng чσur ѕσng...!`')
+    m = message.reply('`**✨FᴇᴄTʜɪɴG...**`')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -57,7 +57,7 @@ def a(client, message):
             #     m.edit("Exceeded 30mins cap")
             #     return
 
-            performer = f"[Ⓖ︎Ⓤ︎Ⓐ︎Ⓡ︎Ⓓ︎Ⓘ︎Ⓐ︎Ⓝ︎ Ⓖ︎Ⓡ︎Ⓞ︎Ⓞ︎Ⓣ︎]" 
+            performer = f"[DCENIMA🎼]" 
             thumb_name = f'thumb{message.message_id}.jpg'
             thumb = requests.get(thumbnail, allow_redirects=True)
             open(thumb_name, 'wb').write(thumb.content)
@@ -72,7 +72,7 @@ def a(client, message):
         )
         print(str(e))
         return
-    m.edit("`uplσαdíng чσur sσng...!`")
+    m.edit("`📬ＵＰＬＯＡＤＩＮＧ...`")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
@@ -87,7 +87,7 @@ def a(client, message):
         m.delete()
         message.delete()
     except Exception as e:
-        m.edit('**An Error Occured. Please Report This To** @jospsupport !!')
+        m.edit('ＥＲＲＯＲ ＹＴＤＬＰ')
         print(e)
     try:
         os.remove(audio_file)
@@ -242,7 +242,7 @@ async def vsong(client, message: Message):
     urlissed = get_text(message)
 
     pablo = await client.send_message(
-        message.chat.id, f"**𝙵𝙸𝙽𝙳𝙸𝙽𝙶 𝚈𝙾𝚄𝚁 𝚅𝙸𝙳𝙴𝙾** `{urlissed}`"
+        message.chat.id, f"ＤＯＷＬＯＡＤＩＮＧ😇"
     )
     if not urlissed:
         await pablo.edit("Invalid Command Syntax Please Check help Menu To Know More!")
@@ -280,8 +280,8 @@ async def vsong(client, message: Message):
     c_time = time.time()
     file_stark = f"{ytdl_data['id']}.mp4"
     capy = f"""
-**𝚃𝙸𝚃𝙻𝙴 :** [{thum}]({mo})
-**𝚁𝙴𝚀𝚄𝙴𝚂𝚃𝙴𝙳 𝙱𝚈 :** {message.from_user.mention}
+ [{thum}]({mo})
+Ｓｅｅ Ｙｏｕ : {message.from_user.mention}
 """
     await client.send_video(
         message.chat.id,
@@ -296,7 +296,7 @@ async def vsong(client, message: Message):
         progress_args=(
             pablo,
             c_time,
-            f"**𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝙿𝚕𝚎𝚊𝚜𝚎 𝚆𝚊𝚒𝚝 𝚂𝚘𝚖𝚎𝚃𝚒𝚖𝚎** `{urlissed}`",
+            f"𝖴𝖯𝖣𝖠𝖳𝖨𝖭𝖦",
             file_stark,
         ),
     )
